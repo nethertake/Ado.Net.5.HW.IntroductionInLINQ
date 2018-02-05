@@ -7,6 +7,34 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <ListView x:Name ="ListViewArea">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path = AreaId}" Header="AreaId"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path = TypeArea}" Header="TypeArea"></GridViewColumn>
+
+                        <GridViewColumn DisplayMemberBinding="{Binding Path = Name}" Header="Name"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path = ParentId}" Header="ParentId"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path = NoSplit}" Header="NoSplit"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path = AssemblyArea}" Header="AssemblyArea"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path = FullName}" Header="FullName"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path = MultipleOrders}" Header="MultipleOrders"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path = HiddenArea}" Header="HiddenArea"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path = IP}" Header="IP"></GridViewColumn>
+
+                        <GridViewColumn DisplayMemberBinding="{Binding Path = PavilionId}" Header="PavilionId"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path = TypeId}" Header="TypeId"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path = OrderExecution}" Header="OrderExecution"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path = Dependence}" Header="Dependence"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path = WorkingPeople}" Header="WorkingPeople"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path = ComponentTypeId}" Header="ComponentTypeId"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path = GroupId}" Header="GroupId"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path = Segment}" Header="Segment"></GridViewColumn>
+
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>

@@ -13,11 +13,11 @@ namespace Ado.Net._5.HW.IntroductionInLINQ
         public int TypeArea { get; set; }
         public string Name { get; set; }
         public int ParentId { get; set; }
-        public bool NoSplit { get; set; }
-        public bool AssemblyArea { get; set; }
+        public string NoSplit { get; set; }
+        public string AssemblyArea { get; set; }
         public string FullName { get; set; }
-        public bool MultipleOrders { get; set; }
-        public bool HiddenArea { get; set; }
+        public string MultipleOrders { get; set; }
+        public string HiddenArea { get; set; }
         public string IP { get; set; }
         public int PavilionId { get; set; }
         public int TypeId { get; set; }
@@ -26,7 +26,7 @@ namespace Ado.Net._5.HW.IntroductionInLINQ
         public int WorkingPeople { get; set; }
         public int ComponentTypeId { get; set; }
         public int GroupId { get; set; }
-        public int Segment { get; set; }
+        public string Segment { get; set; }
 
 
 
