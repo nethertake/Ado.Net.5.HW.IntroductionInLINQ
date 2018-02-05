@@ -58,15 +58,33 @@ namespace Ado.Net._5.HW.IntroductionInLINQ
                 area.ComponentTypeId = Int32.Parse(row["ComponentTypeId"].ToString());
                 area.GroupId = Int32.Parse(row["GroupId"].ToString());
                 area.Segment = row["Segment"].ToString();
+
                 areas.Add(area);
             }
             ListViewArea.ItemsSource = areas;
 
-            var query1 =
+
+            //задание a
+            var query1 = areas.Where(n => n.TypeArea == 1).OrderBy(o => o.Name).Take(10).Select(s => new
+            {
+                s.Name,
+                s.FullName,
+                s.IP
+            });
 
 
+            //задание b
+            var query2 = areas.Where(w => w.ParentId == 0).Select(s => new
+                {         s.Name,
+                          s.FullName,
+                });
+
+            //задание с
+
+            int[] Pavilion = new[] { 1, 2, 3, 4, 5, 6 };
+            var query3 = 1;
         }
 
- 
+     
     }
 }
