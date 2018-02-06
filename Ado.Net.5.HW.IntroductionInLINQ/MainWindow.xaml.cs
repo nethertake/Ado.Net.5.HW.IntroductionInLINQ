@@ -64,7 +64,7 @@ namespace Ado.Net._5.HW.IntroductionInLINQ
             ListViewArea.ItemsSource = areas;
 
 
-            //задание a
+            //task
             var query1 = areas.Where(n => n.TypeArea == 1).OrderBy(o => o.Name).Take(10).Select(s => new
             {
                 s.Name,
@@ -73,13 +73,13 @@ namespace Ado.Net._5.HW.IntroductionInLINQ
             });
 
 
-            //задание b
+            //task
             var query2 = areas.Where(w => w.ParentId == 0).Select(s => new
                 {         s.Name,
                           s.FullName,
                 });
 
-            //задание с
+            //task
 
             int[] Pavilion = new[] { 1, 2, 3, 4, 5, 6 };
             var query4 = areas.Where(w => Pavilion.Where(b => b % 2 == 0).Contains(w.PavilionId)).Select(s => new
@@ -90,7 +90,7 @@ namespace Ado.Net._5.HW.IntroductionInLINQ
                 s.IP
             });
 
-            //задание e
+            //task
 
             var query5 = from p in areas
                 where p.WorkingPeople > 1
@@ -101,11 +101,6 @@ namespace Ado.Net._5.HW.IntroductionInLINQ
 
         }
 
-        static bool GetEven(int number)
-        {
-            if (number % 2 != 0) return false;
-            else return true;
-        }
 
     }
 
