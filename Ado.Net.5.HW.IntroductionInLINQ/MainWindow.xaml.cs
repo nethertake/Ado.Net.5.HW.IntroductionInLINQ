@@ -82,9 +82,32 @@ namespace Ado.Net._5.HW.IntroductionInLINQ
             //задание с
 
             int[] Pavilion = new[] { 1, 2, 3, 4, 5, 6 };
-            var query3 = 1;
+            var query4 = areas.Where(w => Pavilion.Where(b => b % 2 == 0).Contains(w.PavilionId)).Select(s => new
+            {
+                s.PavilionId,
+                s.Name,
+                s.FullName,
+                s.IP
+            });
+
+            //задание e
+
+            var query5 = from p in areas
+                where p.WorkingPeople > 1
+                let PavilionId = Pavilion
+                select p;
+
+       
+
         }
 
-     
+        static bool GetEven(int number)
+        {
+            if (number % 2 != 0) return false;
+            else return true;
+        }
+
     }
+
+   
 }
